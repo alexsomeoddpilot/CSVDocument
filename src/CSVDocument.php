@@ -7,26 +7,38 @@ use Exception;
 class CSVDocument
 {
   /**
+   * File pointer to CSV document
+   *
    * @type resource
    */
   private $pointer;
 
   /**
+   * String delimiter for CSV document
+   * Should typically be ','
+   *
    * @type string
    */
   private $delimiter;
 
   /**
+   * Array of real data
+   *
    * @type array
    */
   public $data = array();
 
   /**
+   * Header data
+   *
    * @type array
    */
   private $header = null;
 
   /**
+   * Constructor which takes in a file pointer and a delimiter string
+   * Processes file data to return associative array with headers as keys
+   *
    * @param $filePointer resource
    * @param $delimiter   string
    */
@@ -45,6 +57,8 @@ class CSVDocument
   }
 
   /**
+   * Processes data row by row
+   *
    * @return void
    */
   private function toArray()
@@ -56,6 +70,8 @@ class CSVDocument
   }
 
   /**
+   * Gets single row from file pointer
+   *
    * @return array
    */
   private function getRow()
