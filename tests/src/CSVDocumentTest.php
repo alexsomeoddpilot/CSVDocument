@@ -1,5 +1,11 @@
 <?php
 
+namespace someoddpilot\csvdocument\tests;
+
+use PHPUnit_Framework_TestCase;
+
+use someoddpilot\csvdocument\CSVDocument;
+
 class CSVDocumentTest extends PHPUnit_Framework_TestCase
 {
   public function testBasics()

@@ -1,5 +1,9 @@
 <?php
 
+namespace someoddpilot\csvdocument;
+
+use Exception;
+
 class CSVDocument
 {
   private $pointer;
