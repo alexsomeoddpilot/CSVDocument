@@ -1,0 +1,10 @@
+{
+    "name": "someoddpilot/csvdocument",
+    "authors": [
+        {
+            "name": "alexsomeoddpilot",
+            "email": "alex@someoddpilot.com"
+        }
+    ],
+    "require": {}
+}
