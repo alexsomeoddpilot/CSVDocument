@@ -6,14 +6,30 @@ use Exception;
 
 class CSVDocument
 {
+  /**
+   * @type resource
+   */
   private $pointer;
 
+  /**
+   * @type string
+   */
   private $delimiter;
 
+  /**
+   * @type array
+   */
   public $data = array();
 
+  /**
+   * @type array
+   */
   private $header = null;
 
+  /**
+   * @param $filePointer resource
+   * @param $delimiter   string
+   */
   public function __construct($filePointer, $delimiter = ',')
   {
     if (!is_resource($filePointer)) {
@@ -28,6 +44,9 @@ class CSVDocument
     $this->toArray();
   }
 
+  /**
+   * @return void
+   */
   private function toArray()
   {
     $this->header = $this->getRow();
@@ -36,6 +55,9 @@ class CSVDocument
     }
   }
 
+  /**
+   * @return array
+   */
   private function getRow()
   {
     return fgetcsv($this->pointer, 1000, $this->delimiter);
